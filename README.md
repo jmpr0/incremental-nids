@@ -3,7 +3,7 @@
 
 This repo contains the code and the data leveraged in the work named **"Adaptable, Incremental, and Explainable Network Intrusion Detection Systems for Internet of Things"**, which has been submitted for revision to _Engineering Applications of Artificial Intelligence (EAAI)_, Elsevier.
 
-![Graphical Abstract](./docs/graphical_abstract.png)
+![Graphical Abstract](./docs/graphical_abstract_w.png)
 
 ## Code Description
 
