@@ -1,0 +1,14 @@
+benign
+dos-http
+dos-icmp
+dos-tcp-syn
+dos-udp
+infog-scan-os
+infog-scan-port
+infog-scan-vuln
+inject-http
+inject-sql
+inject-xss
+malwr-backd-tcp
+malwr-brutef-http
+malwr-ransomware

@@ -1,0 +1,148 @@
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='object')
+Class order:  [6, 5, 1, 0, 2, 4, 9, 7, 8, 3]
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='object')
+Class order:  [3, 0, 8, 6, 11, 10, 1, 4, 7, 9, 2, 5]
+[ 2  3  6  7  9 10 11 12 13 14 15 16]
+[(0, 12)]
+[[6, 5, 1, 0, 2, 4, 9, 7, 8, 3], [11, 9, 13, 2, 16, 15, 3, 6, 7, 14, 10, 12]] [(1, 7)]
+max_task=2
+Lopez17CNN
+LLL_Net(
+  (model): Lopez17CNN(
+    (conv1): Conv2d(1, 32, kernel_size=(4, 2), stride=(1, 1))
+    (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv2): Conv2d(32, 64, kernel_size=(4, 2), stride=(1, 1))
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (fc1): Linear(in_features=2560, out_features=200, bias=True)
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+PRE TRAIN PROCESS
+Stage 0: Select exemplars from validation
+ > Selected 10 validation exemplars, time=0.010s
+Stage 1: Training model with distillation
+| Epoch   1, time=3.074s | Train: skip eval | Valid: time=0.171s loss=1.099, TAw acc=51.872% | *
+| Epoch   2, time=3.196s | Train: skip eval | Valid: time=0.153s loss=0.820, TAw acc=79.820% | *
+| Epoch   3, time=2.734s | Train: skip eval | Valid: time=0.147s loss=0.453, TAw acc=89.043% | *
+| Epoch   4, time=2.583s | Train: skip eval | Valid: time=0.143s loss=0.415, TAw acc=85.368% | *
+| Epoch   5, time=4.463s | Train: skip eval | Valid: time=0.146s loss=0.364, TAw acc=85.784% | *
+| Epoch   6, time=2.917s | Train: skip eval | Valid: time=0.148s loss=0.327, TAw acc=90.569% | *
+| Epoch   7, time=2.813s | Train: skip eval | Valid: time=0.179s loss=0.310, TAw acc=91.748% | *
+| Epoch   8, time=4.434s | Train: skip eval | Valid: time=0.128s loss=0.336, TAw acc=91.678% |
+
+| Epoch   9, time=4.346s | Train: skip eval | Valid: time=0.119s loss=0.319, TAw acc=91.609% |
+
+| Epoch  10, time=4.411s | Train: skip eval | Valid: time=0.112s loss=0.695, TAw acc=84.743% |
+
+POST TRAIN PROCESS
+
+TRAINABILITY INFO
+model.conv1.weight False
+model.conv1.bias False
+model.bn1.weight False
+model.bn1.bias False
+model.conv2.weight False
+model.conv2.bias False
+model.bn2.weight False
+model.bn2.bias False
+model.fc1.weight False
+model.fc1.bias False
+heads.0.weight False
+heads.0.bias False
+
+Stage 2: BiC training for Task 0: alpha=1.00000, beta=0.00000
+WARNING: Not enough samples to store for class 8: selected ALL.
+| Selected 89 train exemplars, time=  0.0s
+| Train Time: pre_train=0.041s, train=36.435s, post_train=0.005s |
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.271 | TAw acc=92.300%, forg=0.000%| TAg acc=92.300%, forg=0.000%, time= 0.535, Num_instances= 6013 <<<
+Save at ./results/src_iot-nidd_dst_ton-iot_bic
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+PRE TRAIN PROCESS
+Stage 0: Select exemplars from validation
+ > Selected 17 validation exemplars, time=0.013s
+[INFO] ID: 140039158016528 | New Classes: [ 2  3  6  7  9 10 11 12 13 14 15 16] | Common Classes: 5
+Stage 1: Training model with distillation
+| Epoch   1, time=2.780s | Train: skip eval | Valid: time=0.283s loss=1.305, TAw acc=93.387% | *
+| Epoch   2, time=4.892s | Train: skip eval | Valid: time=0.479s loss=1.343, TAw acc=93.589% |
+
+| Epoch   3, time=5.407s | Train: skip eval | Valid: time=0.326s loss=1.378, TAw acc=94.195% |
+
+| Epoch   4, time=5.400s | Train: skip eval | Valid: time=0.394s loss=1.386, TAw acc=94.902% |
+
+| Epoch   5, time=5.387s | Train: skip eval | Valid: time=0.355s loss=1.327, TAw acc=95.003% |
+
+| Epoch   6, time=5.115s | Train: skip eval | Valid: time=0.343s loss=1.405, TAw acc=95.305% |
+
+| Epoch   7, time=5.326s | Train: skip eval | Valid: time=0.348s loss=1.455, TAw acc=95.154% |
+
+| Epoch   8, time=5.211s | Train: skip eval | Valid: time=0.374s loss=1.443, TAw acc=95.659% |
+
+| Epoch   9, time=5.370s | Train: skip eval | Valid: time=0.431s loss=1.605, TAw acc=95.760% |
+
+| Epoch  10, time=5.449s | Train: skip eval | Valid: time=0.358s loss=1.567, TAw acc=95.608% |
+
+POST TRAIN PROCESS
+
+TRAINABILITY INFO
+model.conv1.weight False
+model.conv1.bias False
+model.bn1.weight False
+model.bn1.bias False
+model.conv2.weight False
+model.conv2.bias False
+model.bn2.weight False
+model.bn2.bias False
+model.fc1.weight False
+model.fc1.bias False
+heads.0.weight False
+heads.0.bias False
+heads.1.weight False
+heads.1.bias False
+
+Stage 2: Training bias correction layers
+| Epoch  50, time=0.002s | Train: loss=1.684, TAg acc=47.059% |
+| Epoch 100, time=0.002s | Train: loss=1.684, TAg acc=47.059% |
+| Epoch 150, time=0.002s | Train: loss=1.684, TAg acc=47.059% |
+| Epoch 200, time=0.002s | Train: loss=1.684, TAg acc=47.059% |
+Stage 2: BiC training for Task 0: alpha=1.00000, beta=0.00000
+Stage 2: BiC training for Task 1: alpha=0.95276, beta=0.37032
+| Selected 68 train exemplars, time=  0.0s
+| Train Time: pre_train=0.037s, train=54.041s, post_train=0.458s |
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=1.959 | TAw acc=32.463%, forg=59.837%| TAg acc=31.798%, forg=60.502%, time= 0.421, Num_instances= 6013 <<<
+>>> Test on task  1 : loss=0.866 | TAw acc=93.120%, forg=0.000%| TAg acc=90.460%, forg=0.000%, time= 0.979, Num_instances= 8459 <<<
+Save at ./results/src_iot-nidd_dst_ton-iot_bic
+************************************************************************************************************
+TAw Acc
+	 92.3%   0.0% 	Avg.: 92.3% 
+	 32.5%  93.1% 	Avg.: 62.8% 
+************************************************************************************************************
+TAg Acc
+	 92.3%   0.0% 	Avg.: 92.3% 
+	 31.8%  90.5% 	Avg.: 61.1% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0% 
+	 59.8%   0.0% 	Avg.: 59.8% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0% 
+	 60.5%   0.0% 	Avg.: 60.5% 
+************************************************************************************************************
+[Elapsed time = 0.0 h]
+Done!

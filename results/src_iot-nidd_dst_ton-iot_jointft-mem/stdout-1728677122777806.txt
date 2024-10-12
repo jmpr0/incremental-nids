@@ -1,0 +1,96 @@
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='object')
+Class order:  [6, 5, 1, 0, 2, 4, 9, 7, 8, 3]
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='object')
+Class order:  [3, 0, 8, 6, 11, 10, 1, 4, 7, 9, 2, 5]
+[ 2  3  6  7  9 10 11 12 13 14 15 16]
+[(0, 12)]
+[[6, 5, 1, 0, 2, 4, 9, 7, 8, 3], [11, 9, 13, 2, 16, 15, 3, 6, 7, 14, 10, 12]] [(1, 7)]
+max_task=2
+Lopez17CNN
+LLL_Net(
+  (model): Lopez17CNN(
+    (conv1): Conv2d(1, 32, kernel_size=(4, 2), stride=(1, 1))
+    (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv2): Conv2d(32, 64, kernel_size=(4, 2), stride=(1, 1))
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (fc1): Linear(in_features=2560, out_features=200, bias=True)
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time=2.850s | Train: skip eval | Valid: time=0.181s loss=1.019, TAw acc=56.657% | *
+| Epoch   2, time=3.077s | Train: skip eval | Valid: time=0.170s loss=0.591, TAw acc=83.148% | *
+| Epoch   3, time=3.046s | Train: skip eval | Valid: time=0.173s loss=1.028, TAw acc=54.300% |
+
+| Epoch   4, time=2.927s | Train: skip eval | Valid: time=0.173s loss=0.601, TAw acc=79.750% |
+
+| Epoch   5, time=2.974s | Train: skip eval | Valid: time=0.151s loss=0.638, TAw acc=78.363% |
+
+| Epoch   6, time=3.032s | Train: skip eval | Valid: time=0.157s loss=0.339, TAw acc=90.153% | *
+| Epoch   7, time=3.095s | Train: skip eval | Valid: time=0.165s loss=0.299, TAw acc=91.678% | *
+| Epoch   8, time=3.143s | Train: skip eval | Valid: time=0.158s loss=0.379, TAw acc=88.766% |
+
+| Epoch   9, time=2.916s | Train: skip eval | Valid: time=0.165s loss=0.313, TAw acc=91.123% |
+
+| Epoch  10, time=3.120s | Train: skip eval | Valid: time=0.136s loss=0.347, TAw acc=86.408% |
+
+WARNING: Not enough samples to store for class 8: selected ALL.
+| Selected 99 train exemplars, time=  0.0s
+| Train Time: pre_train=0.000s, train=31.826s, post_train=0.004s |
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.260 | TAw acc=92.533%, forg=0.000%| TAg acc=92.533%, forg=0.000%, time= 0.562, Num_instances= 6013 <<<
+Save at ./results/src_iot-nidd_dst_ton-iot_jointft
+************************************************************************************************************
+Task  1
+************************************************************************************************************
+| Epoch   1, time=4.179s | Train: skip eval | Valid: time=0.246s loss=0.499, TAw acc=91.166% | *
+| Epoch   2, time=4.337s | Train: skip eval | Valid: time=0.323s loss=0.505, TAw acc=87.582% |
+
+| Epoch   3, time=4.134s | Train: skip eval | Valid: time=0.227s loss=2.554, TAw acc=61.484% |
+
+| Epoch   4, time=4.178s | Train: skip eval | Valid: time=0.226s loss=0.304, TAw acc=91.620% | *
+| Epoch   5, time=4.041s | Train: skip eval | Valid: time=0.220s loss=0.350, TAw acc=92.277% |
+
+| Epoch   6, time=3.985s | Train: skip eval | Valid: time=0.205s loss=1.475, TAw acc=81.373% |
+
+| Epoch   7, time=4.030s | Train: skip eval | Valid: time=0.177s loss=0.252, TAw acc=92.327% | *
+| Epoch   8, time=4.008s | Train: skip eval | Valid: time=0.237s loss=0.214, TAw acc=95.103% | *
+| Epoch   9, time=2.166s | Train: skip eval | Valid: time=0.134s loss=1.144, TAw acc=77.839% |
+
+| Epoch  10, time=3.881s | Train: skip eval | Valid: time=0.199s loss=0.204, TAw acc=94.902% | *
+| Selected 102 train exemplars, time=  0.0s
+| Train Time: pre_train=0.000s, train=41.150s, post_train=0.004s |
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=2.739 | TAw acc=28.671%, forg=63.862%| TAg acc=28.255%, forg=64.277%, time= 0.524, Num_instances= 6013 <<<
+>>> Test on task  1 : loss=0.194 | TAw acc=95.401%, forg=0.000%| TAg acc=93.900%, forg=0.000%, time= 0.812, Num_instances= 8459 <<<
+Save at ./results/src_iot-nidd_dst_ton-iot_jointft
+************************************************************************************************************
+TAw Acc
+	 92.5%   0.0% 	Avg.: 92.5% 
+	 28.7%  95.4% 	Avg.: 62.0% 
+************************************************************************************************************
+TAg Acc
+	 92.5%   0.0% 	Avg.: 92.5% 
+	 28.3%  93.9% 	Avg.: 61.1% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0% 
+	 63.9%   0.0% 	Avg.: 63.9% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0% 
+	 64.3%   0.0% 	Avg.: 64.3% 
+************************************************************************************************************
+[Elapsed time = 0.0 h]
+Done!

@@ -1,0 +1,10 @@
+benign
+dos-http
+dos-tcp-ack
+dos-tcp-syn
+dos-udp
+infog-scan-host
+infog-scan-os
+infog-scan-port
+malwr-brutef-telnet
+mitm-arpspoof

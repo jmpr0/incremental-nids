@@ -1,0 +1,12 @@
+benign
+dos-http
+dos-tcp
+dos-tcp-syn
+infog-scan-port
+inject-sql
+inject-xss
+malwr-backd-tcp
+malwr-brutef-ftp
+malwr-brutef-http
+malwr-ransomware
+mitm-arpspoof
