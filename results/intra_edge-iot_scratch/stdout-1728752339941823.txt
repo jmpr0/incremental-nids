@@ -1,0 +1,57 @@
+WARNING: using pre-processed dataframe.
+Index(['SCALED_PL', 'SCALED_IAT', 'SCALED_DIR', 'SCALED_WIN', 'ENC_LABEL',
+       'IS_TRAIN'],
+      dtype='object')
+Class order:  [2, 12, 1, 6, 9, 10, 7, 11, 3, 5, 13, 0, 8, 4]
+max_task=2
+Lopez17CNN
+LLL_Net(
+  (model): Lopez17CNN(
+    (conv1): Conv2d(1, 32, kernel_size=(4, 2), stride=(1, 1))
+    (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (conv2): Conv2d(32, 64, kernel_size=(4, 2), stride=(1, 1))
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (fc1): Linear(in_features=2560, out_features=200, bias=True)
+    (fc): Sequential()
+  )
+  (heads): ModuleList()
+)
+************************************************************************************************************
+Task  0
+************************************************************************************************************
+| Epoch   1, time=5.495s | Train: skip eval | Valid: time=0.166s loss=0.403, TAw acc=83.065% | *
+| Epoch   2, time=5.756s | Train: skip eval | Valid: time=0.184s loss=0.390, TAw acc=82.634% | *
+| Epoch   3, time=5.901s | Train: skip eval | Valid: time=0.206s loss=0.382, TAw acc=79.677% | *
+| Epoch   4, time=3.807s | Train: skip eval | Valid: time=0.224s loss=0.332, TAw acc=86.774% | *
+| Epoch   5, time=5.028s | Train: skip eval | Valid: time=0.171s loss=0.258, TAw acc=89.409% | *
+| Epoch   6, time=5.486s | Train: skip eval | Valid: time=0.204s loss=0.248, TAw acc=89.247% | *
+| Epoch   7, time=3.901s | Train: skip eval | Valid: time=0.165s loss=0.326, TAw acc=88.065% |
+
+| Epoch   8, time=3.663s | Train: skip eval | Valid: time=0.175s loss=0.228, TAw acc=89.677% | *
+| Epoch   9, time=4.788s | Train: skip eval | Valid: time=0.266s loss=0.236, TAw acc=85.591% |
+
+| Epoch  10, time=4.688s | Train: skip eval | Valid: time=0.204s loss=0.214, TAw acc=89.677% | *
+| Train Time: pre_train=0.002s, train=50.505s, post_train=0.000s |
+Saving logits...
+------------------------------------------------------------------------------------------------------------
+>>> Test on task  0 : loss=0.207 | TAw acc=89.803%, forg=0.000%| TAg acc=89.803%, forg=0.000%, time= 0.603, Num_instances= 7963 <<<
+Save at ../results/intra_edge-iot_scratch
+************************************************************************************************************
+TAw Acc
+	 89.8%   0.0% 	Avg.: 89.8% 
+	  0.0%   0.0% 	Avg.:  0.0% 
+************************************************************************************************************
+TAg Acc
+	 89.8%   0.0% 	Avg.: 89.8% 
+	  0.0%   0.0% 	Avg.:  0.0% 
+************************************************************************************************************
+TAw Forg
+	  0.0%   0.0% 
+	  0.0%   0.0% 	Avg.:  0.0% 
+************************************************************************************************************
+TAg Forg
+	  0.0%   0.0% 
+	  0.0%   0.0% 	Avg.:  0.0% 
+************************************************************************************************************
+[Elapsed time = 0.0 h]
+Done!

@@ -209,6 +209,7 @@ def main(argv=None):
         appr.train(t, trn_loader[t], val_loader[t])
 
         appr.save_logits(t, trn_loader, args.seed)
+        appr.save_logits(t, tst_loader, args.seed, is_train=False)
 
         print('-' * 108)
         
