@@ -5,6 +5,30 @@ This repo contains the code and (a sample of) the data leveraged in the work nam
 
 ![Graphical Abstract](./docs/graphical_abstract_w.png)
 
+DOI: https://doi.org/10.1016/j.engappai.2025.110143
+
+## Abstract
+
+The growing adoption of Internet of Things (IoT) devices expands the cybersecurity landscape and complicates the protection of IoT environments. Therefore, Network Intrusion Detection Systems (NIDSs) have become essential. They are increasingly using Machine and Deep Learning (ML and DL) techniques for detecting and mitigating sophisticated cyber threats.
+
+However, the black-box nature of these systems hinders adoption, emphasizing the need for eXplainable Artificial Intelligence (XAI) to clarify decision-making. Additionally, IoT networks require adaptable NIDSs integrating new traffic types without retraining. This study integrates XAI with Class Incremental Learning (CIL) and Domain Incremental Learning (DIL) to improve NIDS transparency and adaptability. This work focuses on training NIDSs with traffic from a source network and extending it to a target network. For the sake of generalization, three recent and publicly available IoT security datasets are leveraged. Each dataset is collected in a different network setup and includes different attacks and benign profiles.
+
+Key findings include: (i) NIDSs perform effectively within the source network (> 79% F1 score) but poorly in the target one (33% F1 score at least);(ii) adapting NIDSs incrementally is highly dependent on the source network traffic, with richer traffic complicating the adaptation. Incremental techniques help in adapting NIDSs (> 71% F1 score), with Fine-Tuning with Memory (FT-Mem) excelling for complex source networks and Bias Correction (BiC) for simpler ones;(iii) in terms of XAI, traffic characteristics significantly influence classification outcomes, and NIDS decisions are not based on minimal-distance logic.
+
+## To Cite
+
+```
+@article{cerasuolo2025adaptable,
+  title={Adaptable, incremental, and explainable network intrusion detection systems for internet of things},
+  author={Cerasuolo, Francesco and Bovenzi, Giampaolo and Ciuonzo, Domenico and Pescap{\`e}, Antonio},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={144},
+  pages={110143},
+  year={2025},
+  publisher={Elsevier}
+}
+```
+
 ## Code Description
 
 `python3 main.py`
